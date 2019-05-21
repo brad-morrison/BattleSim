@@ -102,11 +102,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: red;
+    height: 1080px;
+}
 
+.main-content-wrapper {
+    position: relative;
+    background-color: aquamarine;
+    width: 500px;
+    height: 500p;
+    margin: auto;
+    margin-top: 20%;
+}
 
-
-
-
+.left-content {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    background-color: aqua;
+}
 
 
 

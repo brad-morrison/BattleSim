@@ -119,10 +119,18 @@ textarea {
 }
 
 .left-content {
+    display: flex;
+    float: left;
     position: relative;
     height: 100%;
     width: 300px;
-    background-color: aqua;
+    background-color: orange;
+}
+
+.team-stats {
+    position: relative;
+    display: block;
+    float: left;
 }
 
 

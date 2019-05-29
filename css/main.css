@@ -102,43 +102,54 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.main-wrapper {
-    position: relative;
-    width: 100%;
-    background-color: red;
-    height: 1080px;
+.body {
+    background-color: #f5f5f5;
 }
 
-.main-content-wrapper {
-    position: relative;
-    background-color: aquamarine;
-    width: 500px;
-    height: 500p;
-    margin: auto;
-    margin-top: 20%;
-}
-
-.left-content {
+.wrapper {
     display: flex;
-    float: left;
-    position: relative;
-    height: 100%;
-    width: 300px;
-    background-color: orange;
+    width: 100%;
+    justify-content: center;
+    padding-top: 200px;
 }
 
-.team-stats {
-    position: relative;
-    display: block;
-    float: left;
+.card {
+    background-color: #f2f2f2;
+    text-align: center;
 }
 
+.avatar-image {
+    border-radius: 500px;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    background-color: white;
+}
 
+.stats {
+    margin: 20px;
+}
 
+.input-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-
-
-
+.attack-button-flex {
+    padding-top: 100px;
+}
+.attack-button {
+    background-color: red;
+    margin: 30px;
+    height: 80px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
 
 
 

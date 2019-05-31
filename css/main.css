@@ -113,6 +113,30 @@ textarea {
     padding-top: 200px;
 }
 
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: rgba(105, 105, 105, 0.58);
+    z-index: 99;
+}
+
+.stat-window {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    background-color: #f0f0f0;
+    z-index: 100;
+    left: 30%;
+    top: 30%;
+    border-radius: 15px;
+}
+
 .card {
     background-color: #f2f2f2;
     text-align: center;
@@ -132,12 +156,15 @@ textarea {
 
 .input-item {
     margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .attack-button-flex {
     padding-top: 100px;
 }
+
 .attack-button {
     background-color: red;
     margin: 30px;
@@ -151,6 +178,14 @@ textarea {
     margin-bottom: 50%;
 }
 
+.stat-button {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.stat-number {
+    width: 30%;
+}
 
 
  /* ==========================================================================

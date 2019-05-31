@@ -171,8 +171,37 @@ textarea {
     background-color: #f8f8f8;
     height: 30px;
     margin: 8px;
+    display: flex;
+    align-items: center;
 }
 
+.row-name {
+    width: 25%;
+    padding-left: 10px;
+}
+
+.row-rank {
+    width: 30%;
+    color: #c98c44;
+}
+
+.row-buttons {
+    text-align: end;
+    width: 50%;
+    height: 100%;
+}
+
+.row-button {
+    height: 100%;
+    width: 30px;
+    background-color: #a9c9e5;
+    border: none;
+}
+
+.delete-button {
+    background-color: #d86f6f;
+    
+}
 
 .window-top {
     width: 100%;

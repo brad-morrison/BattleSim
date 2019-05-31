@@ -27,6 +27,15 @@
         <div class="overlay" id="over">
             <div class="stat-window">
                 <button class="close-button" onclick="closeWindow()">X</button>
+                <div class="scroll-area">
+                    <div class="scroll-main" id="scroll-main">
+                        
+                    </div>
+                    
+                </div>
+                <div class="window-bottom">
+                    <button class="add-button" onclick="addTo('infantry')">Add</button>
+                </div>
             </div>
         </div>
         <div class="card card-left">
@@ -42,7 +51,7 @@
                 </div>
                 <div class="input-item infantry-group">
                     <button class="stat-button" onclick="clicked()">Infantry</button>
-                    <a class="stat-number">0</a>
+                    <a class="stat-number" id="A_Infantry_Count">0</a>
                 </div>
                 <div class="input-item archer-group">
                     <button class="stat-button">Archers</button>

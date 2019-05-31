@@ -24,14 +24,16 @@
     <!------------------------------------------------------------------------>
   
     <div class="wrapper">
-        <div class="overlay">
-            <div class="stat-window"></div>
+        <div class="overlay" id="over">
+            <div class="stat-window">
+                <button class="close-button" onclick="closeWindow()">X</button>
+            </div>
         </div>
         <div class="card card-left">
             <img class="avatar-image" src="img/man.svg">
             <div class="stats">
                 <div class="input-item leader-group">
-                    <a>Leader: </a>
+                    <a>Leader:</a>
                     <select name="leader">
                         <option value="Julius Caeser">Julias Caeser</option>
                         <option value="Ghandi">Ghandi</option>
@@ -39,19 +41,19 @@
                     </select>
                 </div>
                 <div class="input-item infantry-group">
-                    <button class="stat-button">Infantry </button>
+                    <button class="stat-button" onclick="clicked()">Infantry</button>
                     <a class="stat-number">0</a>
                 </div>
                 <div class="input-item archer-group">
-                    <button class="stat-button">Archers </button>
+                    <button class="stat-button">Archers</button>
                     <a class="stat-number">0</a>
                 </div>
                 <div class="input-item cavalry-group">
-                    <button class="stat-button">Cavalry </button>
+                    <button class="stat-button">Cavalry</button>
                     <a class="stat-number">0</a>
                 </div>
                 <div class="input-item pikemen-group">
-                    <button class="stat-button">Pikemen </button>
+                    <button class="stat-button">Pikemen</button>
                     <a class="stat-number">0</a>
                 </div>
             </div>

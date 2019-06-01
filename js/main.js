@@ -35,16 +35,21 @@ function addTo(type) {
 }
 
 function createInfantry() {
-    var row = {type: "Infantry", rank: "1"};
+    var row0 = {type: "Infantry", rank: "Rank 1"};
     
     // create row
     var x = document.createElement("DIV");
     x.innerHTML = rowObj;
-    x.id = "rowObjNew";
+    x.id = "row0";
     x.className = "row";
     document.getElementById('scroll-main').appendChild(x);
     
     // add data to row
+    var c = document.getElementById('row0').children;
+    c[0].innerHTML = row0.type;
+    c[1].innerHTML = row0.rank;
     
+    //set id to not new
+    x.id = "row";
     
 }

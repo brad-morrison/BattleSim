@@ -28,25 +28,18 @@
             <div class="stat-window">
                 <div class="window-top">
                     <button class="close-button" onclick="closeWindow()"></button>
+                    <p id="over-title">Infantry</p>
                 </div>
                 <div class="scroll-area">
                     <div class="scroll-main" id="scroll-main">
-<!-- 
-                        <div class="row" id="rowObj">
-                            <p class="row-name">Infantry</p>
-                            <p class="row-rank">Rank 1</p>
-                            <div class="row-buttons">
-                                <button class="row-button rankup-button" onclick='addRank(this.parentElement.parentElement.children[1])'>+</button>
-                                <button class="row-button rankdown-button" onclick='lowerRank(this.parentElement.parentElement.children[1])'>-</button>
-                                <button class="row-button delete-button">X</button>
-                            </div>
-                        </div>
--->
+
+                            
+                            
                     </div>
                     
                 </div>
                 <div class="window-bottom">
-                    <button class="add-button" onclick="addTo('infantry')">Add</button>
+                    <button class="add-button" onclick="addTo()">Add</button>
                 </div>
             </div>
         </div>
@@ -62,20 +55,20 @@
                     </select>
                 </div>
                 <div class="input-item infantry-group">
-                    <button class="stat-button" onclick="clicked()">Infantry</button>
+                    <button class="stat-button" onclick="clicked('infantry')">Infantry</button>
                     <a class="stat-number" id="A_Infantry_Count">0</a>
                 </div>
                 <div class="input-item archer-group">
-                    <button class="stat-button">Archers</button>
-                    <a class="stat-number">0</a>
+                    <button class="stat-button" onclick="clicked('archers')">Archers</button>
+                    <a class="stat-number" id="A_Archers_Count">0</a>
                 </div>
                 <div class="input-item cavalry-group">
-                    <button class="stat-button">Cavalry</button>
-                    <a class="stat-number">0</a>
+                    <button class="stat-button" onclick="clicked('cavalry')">Cavalry</button>
+                    <a class="stat-number" id="A_Cavalry_Count">0</a>
                 </div>
                 <div class="input-item pikemen-group">
-                    <button class="stat-button">Pikemen</button>
-                    <a class="stat-number">0</a>
+                    <button class="stat-button" onclick="clicked('pikemen')">Pikemen</button>
+                    <a class="stat-number" id="A_Pikemen_Count">0</a>
                 </div>
             </div>
         </div>

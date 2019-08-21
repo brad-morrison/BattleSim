@@ -73,12 +73,28 @@ function loadWindowData(reg) {
     // loop to load data
     for (i=0; i<unitSet.length; i++)
     {
-        createUnit(reg);
+        //createUnit(reg);
+        fetchUnits(unitSet, i);
     }
     
     // alert which window is open
     openWindow = reg;
     
+}
+
+function fetchUnits(set, index)
+{
+    // create row
+    var x = document.createElement("DIV");
+    x.innerHTML = rowObj;
+    x.id = "row" + (index+1);
+    x.className = "row";
+    document.getElementById('scroll-main').appendChild(x);
+    
+    // add data to row
+    var c = x.children;
+    c[0].innerHTML = set[i].type;
+    c[1].innerHTML = "Rank " + set[i].rank;
 }
 
 function addTo() {
@@ -164,8 +180,34 @@ function createUnit(unitType) {
 
 function addRank(element) {
     
-    // NEXT STEP IS TO MAKE ADD RANK WORK IN ARRAY ITEMS
+    // get elements parent and row id
+    var row = element.parentElement;
+    var rowName = row.id;
+    var chosenIndex = rowName.slice(3);
     
+    //if statements to change correct array item
+    if (openWindow == "infantry")
+    {
+        if (a_infantry[chosenIndex-1].rank < 3) {a_infantry[chosenIndex-1].rank++;} // if rank is < 3 add to rank
+    }
+    
+    if (openWindow == "archers")
+    {
+        if (a_archers[chosenIndex-1].rank < 3) {a_archers[chosenIndex-1].rank++;}
+    }
+    
+    if (openWindow == "pikemen")
+    {
+        if (a_pikemen[chosenIndex-1].rank < 3) {a_pikemen[chosenIndex-1].rank++;}
+    }
+    
+    if (openWindow == "cavalry")
+    {
+        if (a_cavalry[chosenIndex-1].rank < 3) {a_cavalry[chosenIndex-1].rank++;}
+    }
+    
+    
+    //HTML changes
     var curRank = element.innerHTML;
     
     if (curRank == "Rank 1")
@@ -181,6 +223,33 @@ function addRank(element) {
 
 function lowerRank(element) {
     
+    // get elements parent and row id
+    var row = element.parentElement;
+    var rowName = row.id;
+    var chosenIndex = rowName.slice(3);
+    
+    //if statements to change correct array item
+    if (openWindow == "infantry")
+    {
+        if (a_infantry[chosenIndex-1].rank >= 2) {a_infantry[chosenIndex-1].rank--;} // if rank is < 3 add to rank
+    }
+    
+    if (openWindow == "archers")
+    {
+        if (a_archers[chosenIndex-1].rank >= 2) {a_archers[chosenIndex-1].rank--;}
+    }
+    
+    if (openWindow == "pikemen")
+    {
+        if (a_pikemen[chosenIndex-1].rank >= 2) {a_pikemen[chosenIndex-1].rank--;}
+    }
+    
+    if (openWindow == "cavalry")
+    {
+        if (a_cavalry[chosenIndex-1].rank >= 2) {a_cavalry[chosenIndex-1].rank--;}
+    }
+    
+    // HTML changes
     var curRank = element.innerHTML;
     
     if (curRank == "Rank 3")

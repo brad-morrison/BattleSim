@@ -44,65 +44,91 @@
             </div>
         </div>
         <div class="card card-left">
+            <p id="debug-bonus-score-a">0</p>
             <img class="avatar-image" src="img/man.svg">
             <div class="stats">
                 <div class="input-item leader-group">
                     <a>Leader:</a>
-                    <select name="leader">
+                    <select name="leader" class="drop-down">
                         <option value="Julius Caeser">Julias Caeser</option>
                         <option value="Ghandi">Ghandi</option>
                         <option value="Robert the Bruce">Robert the Bruce</option>
                     </select>
                 </div>
                 <div class="input-item infantry-group">
-                    <button class="stat-button" onclick="clicked('infantry')">Infantry</button>
+                    <button class="stat-button" onclick="clicked('a_infantry')">Infantry</button>
+                    <button class="minus-button" onclick="minus('ai')">-</button>
+                    <button class="plus-button" onclick="plus('ai')">+</button>
+                    
                     <a class="stat-number" id="A_Infantry_Count">0</a>
                 </div>
                 <div class="input-item archer-group">
-                    <button class="stat-button" onclick="clicked('archers')">Archers</button>
+                    <button class="stat-button" onclick="clicked('a_archers')">Archers</button>
+                    <button class="minus-button" onclick="minus('aa')">-</button>
+                    <button class="plus-button" onclick="plus('aa')">+</button>
+                    
                     <a class="stat-number" id="A_Archers_Count">0</a>
                 </div>
                 <div class="input-item cavalry-group">
-                    <button class="stat-button" onclick="clicked('cavalry')">Cavalry</button>
+                    <button class="stat-button" onclick="clicked('a_cavalry')">Cavalry</button>
+                    <button class="minus-button" onclick="minus('ac')">-</button>
+                    <button class="plus-button" onclick="plus('ac')">+</button>
+                    
                     <a class="stat-number" id="A_Cavalry_Count">0</a>
                 </div>
                 <div class="input-item pikemen-group">
-                    <button class="stat-button" onclick="clicked('pikemen')">Pikemen</button>
+                    <button class="stat-button" onclick="clicked('a_pikemen')">Pikemen</button>
+                    <button class="minus-button" onclick="minus('ap')">-</button>
+                    <button class="plus-button" onclick="plus('ap')">+</button>
+                    
                     <a class="stat-number" id="A_Pikemen_Count">0</a>
                 </div>
             </div>
         </div>
         
         <div class="attack-button-flex">
-            <button class="attack-button">Attack</button>
+            <button class="attack-button" onclick="battleLogic()">Attack</button>
         </div>
         
         <div class="card card-right">
+            <p id="debug-bonus-score-b">0</p>
             <img class="avatar-image" src="img/man.svg">
             <div class="stats">
                 <div class="input-item leader-group">
-                    <a>Leader: </a>
-                    <select name="leader">
+                    <a>Leader:</a>
+                    <select name="leader" class="drop-down">
                         <option value="Julius Caeser">Julias Caeser</option>
                         <option value="Ghandi">Ghandi</option>
                         <option value="Robert the Bruce">Robert the Bruce</option>
                     </select>
                 </div>
                 <div class="input-item infantry-group">
-                    <a>Infantry: </a>
-                    <input type="text" name="infantry" value="0">
+                    <button class="stat-button" onclick="clicked('b_infantry')">Infantry</button>
+                    <button class="minus-button" onclick="minus('bi')">-</button>
+                    <button class="plus-button" onclick="plus('bi')">+</button>
+                    
+                    <a class="stat-number" id="B_Infantry_Count">0</a>
                 </div>
                 <div class="input-item archer-group">
-                    <a>Archers: </a>
-                    <input type="text" name="archers" value="0">
+                    <button class="stat-button" onclick="clicked('b_archers')">Archers</button>
+                    <button class="minus-button" onclick="minus('ba')">-</button>
+                    <button class="plus-button" onclick="plus('ba')">+</button>
+                    
+                    <a class="stat-number" id="B_Archers_Count">0</a>
                 </div>
                 <div class="input-item cavalry-group">
-                    <a>Cavalry: </a>
-                    <input type="text" name="cavalry" value="0">
+                    <button class="stat-button" onclick="clicked('b_cavalry')">Cavalry</button>
+                    <button class="minus-button" onclick="minus('bc')">-</button>
+                    <button class="plus-button" onclick="plus('bc')">+</button>
+                    
+                    <a class="stat-number" id="B_Cavalry_Count">0</a>
                 </div>
                 <div class="input-item pikemen-group">
-                    <a>Pikemen: </a>
-                    <input type="text" name="pikemen" value="0">
+                    <button class="stat-button" onclick="clicked('b_pikemen')">Pikemen</button>
+                    <button class="minus-button" onclick="minus('bp')">-</button>
+                    <button class="plus-button" onclick="plus('bp')">+</button>
+                    
+                    <a class="stat-number" id="B_Pikemen_Count">0</a>
                 </div>
             </div>
         </div>

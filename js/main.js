@@ -637,6 +637,7 @@ function deleteRow(element) {
 
 function battleLogic()
 {
+    document.getElementById("wrap").style.paddingTop = '50px';
     
     var playerScore = createScore();
     
